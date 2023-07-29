@@ -217,8 +217,6 @@ public:
 						throw std::string("there's no ip available in this host");
 					if (listen(server_fd, SOMAXCONN) == -1)
 						throw std::string("problem with listen");
-					else
-						print_error << server_fd << std::endl;
 					pollfd  temp;
 					temp.fd = server_fd;
 					temp.events = POLLIN;
